@@ -36,8 +36,8 @@ Component.prototype.init = function() {
 
 Component.prototype.create = function(){
     if(this.model.get('mode') == 'svg'){
-        this.icon.innerHTML = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' +
-            this.model.get('width') + ' ' + this.model.get('height') +
+        this.icon.innerHTML = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25' +
+            // this.model.get('width') + ' ' + this.model.get('height') +
             '" width="' +
             this.model.get('width') +
             '" height="' +
