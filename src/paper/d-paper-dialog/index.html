@@ -1,4 +1,4 @@
-<index: element="d-paper-dialog" attributes="heading actions">
+<index: element="d-paper-dialog">
 <!--
 Provides a dialog overlay.
 
@@ -33,14 +33,7 @@ Transition examples:
     <div class="container layout vertical" style="width: {{width}}; height: {{height}};">
         <d-paper-shadow z="3" hasPosition="true"></d-paper-shadow>
         <div class="dialog-content">
-            <div class="main flex auto">
-              <h1>{{@heading}}</h1>
-              <br>
-              {{@content}}
-            </div>
-            <div class="actions layout horizontal">
-                {{@actions}}
-            </div>
+            {{@content}}
         </div>
     </div>
 </div>
