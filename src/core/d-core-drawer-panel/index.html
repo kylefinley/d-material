@@ -43,23 +43,25 @@ To position the drawer to the right, add `rightDrawer` attribute.
 
 -->
 
-<div class="d-core-drawer-panel{{if left}} left-drawer{{/if}}{{if right}} right-drawer{{/if}}">
+<div class="d-core-drawer-panel narrow-layout{{if left}} left-drawer{{/if}}{{if right}} right-drawer{{/if}}">
 
-    {{if right}}
-    <div class="right-drawer-wrapper drawer">
+    <!-- {{if right}} -->
+    <div class="right-drawer-wrapper drawer{{if right}} active{{/if}}">
+        <d-paper-shadow z="3" hasPosition="true"></d-paper-shadow>
         {{@rightdrawer}}
     </div>
-    {{/if}}
+    <!-- {{/if}} -->
 
-    <div class="main">
+    <div class="main{{if left}} push-right{{/if}}">
         {{@main}}
-        <div class="scrim"></div>
     </div>
 
-    {{if left}}
-    <div class="left-drawer-wrapper drawer">
+    <div class="scrim{{if right}} active{{/if}}" on-click="hide('right')"></div>
+
+    <!-- {{if left}} -->
+    <div class="left-drawer-wrapper drawer{{if left}} active{{/if}}">
         {{@leftdrawer}}
     </div>
-    {{/if}}
+    <!-- {{/if}} -->
 
 </div>

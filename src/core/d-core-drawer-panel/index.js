@@ -80,6 +80,21 @@ Component.prototype.create = function () {
     this.model.set('transition', true);
 }
 
+Component.prototype.show = function(side) {
+    if (!side) { return; }
+    return this.model.set(side, true);
+};
+
+Component.prototype.hide = function(side) {
+    if (!side) { return; }
+    return this.model.set(side, false);
+};
+
+Component.prototype.toggle = function(side) {
+    if (!side) { return; }
+    return this.model.set(side, !this.model.get(side));
+};
+
 Component.prototype.togglePanel = function () {
     this.selected = this.selected === 'main' ? 'drawer' : 'main';
 }
